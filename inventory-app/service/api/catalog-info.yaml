@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: inventory-api
+  description: Retrieve items in inventory
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: inventory-team
+  system: inventory-app
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Inventory API
+      license:
+        name: MIT
+    servers:
+      - url: http://inventory.mystore.com/v1/items
+    paths:
+      /items:
+        get:
+          summary: List all items

@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inventory-service
+  description: Inventory Service
+spec:
+  type: service
+  lifecycle: experimental
+  owner: inventory-team
+  system: inventory-app
+  providesApis:
+    - inventory-api
